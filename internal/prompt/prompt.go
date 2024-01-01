@@ -1,10 +1,11 @@
 package prompt
 
 import (
-	"aoc23/internal/util"
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/IAmRasputin/go-aoc23/internal/util"
 )
 
 func PromptString(day int32, part int32) string {

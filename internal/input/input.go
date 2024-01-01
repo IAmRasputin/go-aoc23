@@ -1,10 +1,11 @@
 package input
 
 import (
-	"aoc23/internal/util"
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/IAmRasputin/go-aoc23/internal/util"
 )
 
 func InputString(day int32) string {

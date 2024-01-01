@@ -1,10 +1,11 @@
 package day1
 
 import (
-	"aoc23/internal/input"
-	"aoc23/internal/util"
 	"fmt"
 	"strconv"
+
+	"github.com/IAmRasputin/go-aoc23/internal/input"
+	"github.com/IAmRasputin/go-aoc23/internal/util"
 )
 
 func parse_rune(r rune) int {

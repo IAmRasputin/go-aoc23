@@ -4,9 +4,9 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package main
 
 import (
-	"aoc23/cmd"
 	"fmt"
 
+	"github.com/IAmRasputin/go-aoc23/cmd"
 	"github.com/spf13/viper"
 )
 

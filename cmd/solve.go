@@ -4,10 +4,10 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"aoc23/internal/util"
-	"aoc23/pkg/day1"
 	"strconv"
 
+	"github.com/IAmRasputin/go-aoc23/internal/util"
+	"github.com/IAmRasputin/go-aoc23/pkg/day1"
 	"github.com/spf13/cobra"
 )
 

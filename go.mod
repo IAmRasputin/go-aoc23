@@ -1,4 +1,4 @@
-module aoc23
+module github.com/IAmRasputin/go-aoc23
 
 go 1.21.4
 

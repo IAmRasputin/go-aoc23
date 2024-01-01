@@ -4,13 +4,13 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"aoc23/internal/prompt"
-	"aoc23/internal/util"
 	"errors"
 	"fmt"
 	"os"
 	"strconv"
 
+	"github.com/IAmRasputin/go-aoc23/internal/prompt"
+	"github.com/IAmRasputin/go-aoc23/internal/util"
 	"github.com/spf13/cobra"
 )
 
