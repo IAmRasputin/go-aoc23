@@ -4,6 +4,7 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
+	"fmt"
 	"strconv"
 
 	"github.com/IAmRasputin/go-aoc23/internal/util"
@@ -29,6 +30,14 @@ var solveCmd = &cobra.Command{
 		switch day {
 		case 1:
 			day1.Solve(part)
+		case 2:
+			fmt.Println("Not implemented!")
+		case 3:
+			fmt.Println("Not implemented!")
+		case 4:
+			fmt.Println("Not implemented!")
+		case 5:
+			fmt.Println("Not implemented!")
 		}
 	},
 }

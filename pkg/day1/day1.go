@@ -3,6 +3,7 @@ package day1
 import (
 	"fmt"
 	"strconv"
+	"strings"
 
 	"github.com/IAmRasputin/go-aoc23/internal/input"
 	"github.com/IAmRasputin/go-aoc23/internal/util"
@@ -10,6 +11,10 @@ import (
 
 func parse_rune(r rune) int {
 	return int(r) - '0'
+}
+
+func int_rune(i int) rune {
+	return rune(i + '0')
 }
 
 func part1_decode(s string) (int, error) {
@@ -43,8 +48,59 @@ func part1_decode(s string) (int, error) {
 	return strconv.Atoi(fmt.Sprintf("%d%d", first, second))
 }
 
-func part2_decode(s string) (int, error) {
-	return 0, nil
+func part2_decode(s string) int {
+	numbers := []string{
+		"zero",
+		"one",
+		"two",
+		"three",
+		"four",
+		"five",
+		"six",
+		"seven",
+		"eight",
+		"nine",
+	}
+
+	digits := []rune{
+		'0',
+		'1',
+		'2',
+		'3',
+		'4',
+		'5',
+		'6',
+		'7',
+		'8',
+		'9',
+	}
+
+	first := 0
+	second := 0
+
+	// From the front!
+toplevel:
+	for i, c := range s {
+		for j, n := range numbers {
+			if j != 0 && (strings.HasPrefix(s[i:], n) || rune(c) == digits[j]) {
+				first = j
+				break toplevel
+			}
+		}
+	}
+
+	// From the back!
+reverse_toplevel:
+	for i := len(s) - 1; i >= 0; i-- {
+		for j, n := range numbers {
+			if j != 0 && (strings.HasPrefix(s[i:], n) || rune(s[i]) == digits[j]) {
+				second = j
+				break reverse_toplevel
+			}
+		}
+	}
+
+	return (10 * first) + second
 }
 
 func Solve(part int) {
@@ -64,11 +120,10 @@ func Solve(part int) {
 		sum := 0
 
 		for _, line := range input.InputLines(1) {
-			value, err := part2_decode(line)
-			util.Check(err)
+			value := part2_decode(line)
 
 			sum += value
 		}
-		fmt.Printf("%d\n", 0)
+		fmt.Printf("%d\n", sum)
 	}
 }
